@@ -8,7 +8,9 @@ function App() {
 
   const[products, setProduct] = useState([])
   const[basket, setBasket] = useState([])
+  const[result, setResult] = useState("")
 
+  
   
   const addtobasket = (name) =>{
     
@@ -22,6 +24,19 @@ function App() {
 
   const clearbasket =()=>{
     setBasket([]);
+    setResult("");
+  }
+
+  const pickRandom=()=>{
+    
+    if(basket.length > 1){
+      const getrandom =  Math.floor(Math.random()* (basket.length)) ;
+      setResult(basket[getrandom]);
+    }else{
+      console.log("select at least 2");
+    }
+
+    
   }
   
   useEffect(()=>{
@@ -49,7 +64,7 @@ function App() {
 
           </div>
           </div>
-          <Cart baskets={basket} clearbasket={clearbasket}/>
+          <Cart baskets={basket} clearbasket={clearbasket} pickRandom={pickRandom} result={result}/>
         </div>
     </div>
   );

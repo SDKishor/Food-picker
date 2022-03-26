@@ -15,10 +15,10 @@ body {
 
 .main {
   display: flex;
-  margin-top: 20px;
 }
 
 .product_Container {
+  margin-top: 20px;
   flex: 5;
   display: flex;
   align-items: center;
@@ -32,7 +32,11 @@ body {
 }
 
 @media (max-width: 750px) {
+  .main {
+    flex-direction: column-reverse;
+  }
   .products {
     grid-template-columns: 1fr;
+    order: 1;
   }
 }

@@ -5,7 +5,7 @@ import SmallCard from '../smallCard/SmallCard';
 
 
 function Cart(props) {
-  const {baskets, clearbasket} = props 
+  const {baskets, clearbasket, pickRandom,result} = props 
 
   return (
     <div className='cart'>
@@ -19,8 +19,15 @@ function Cart(props) {
           
         </div>
 
-        <button className='randomBtn'>Pick Random</button>
-        <button onClick={clearbasket} className='clearBtn'>Select Again</button>
+        <button onClick={pickRandom} className='randomBtn'>Pick Random</button>
+        <button onClick={clearbasket}  className='clearBtn'>Select Again</button>
+
+        <h4>
+          Result:
+          <span>
+            {result}
+          </span>
+        </h4>
     </div>
   )
 }

@@ -1,4 +1,6 @@
 .cart {
+  margin-top: 20px;
+  margin-bottom: auto;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -11,6 +13,15 @@
   padding: 20px;
 }
 
+@media (max-width: 750px) {
+  .cart {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    border-radius: 0px;
+    order: 1;
+  }
+}
 .cart h3 {
   margin-top: 0px;
   display: flex;
@@ -45,4 +56,16 @@
   font-weight: 700;
   font-size: 16px;
   cursor: pointer;
+}
+
+.cart h4 {
+  text-align: center;
+  font-size: 24px;
+}
+
+.cart h4 span {
+  margin-top: 20px;
+  display: block;
+  color: #fc6c4c;
+  font-size: 32px;
 }
