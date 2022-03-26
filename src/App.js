@@ -6,9 +6,24 @@ import Product from './components/product/Product';
 
 function App() {
 
-
   const[products, setProduct] = useState([])
+  const[basket, setBasket] = useState([])
 
+  
+  const addtobasket = (name) =>{
+    
+    if(!basket.includes(name) && basket.length < 4){
+      setBasket([...basket,name])
+    }
+    else{
+      console.log("can not select more then 4 items");
+    }
+  }
+
+  const clearbasket =()=>{
+    setBasket([]);
+  }
+  
   useEffect(()=>{
     fetch("data.json")
     .then(res => res.json())
@@ -27,14 +42,14 @@ function App() {
                  name={product.name}
                  price ={product.price}
                  image = {product.image}
+                 addtobasket={addtobasket}
                 /> 
               )
             }
 
           </div>
           </div>
-          
-          <Cart/>
+          <Cart baskets={basket} clearbasket={clearbasket}/>
         </div>
     </div>
   );
