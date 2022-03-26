@@ -66,6 +66,33 @@ function App() {
           </div>
           <Cart baskets={basket} clearbasket={clearbasket} pickRandom={pickRandom} result={result}/>
         </div>
+        <div className="faq_section">
+          <div className="question">
+            <h3>How useState Works?</h3>
+            <p>useState is the first basic react hook. it lets you to add state to a functional component. it is a new way to add state without having to use class base component and should be used inside functional components. it return an array with two items first is the current value and second one let us update the value.</p>
+          </div>
+          <div className="question">
+            <h3>Difference between props vs state ?</h3>
+            <div className="verses">
+              <span>
+                Props: <br />
+                Props are read-only <br />
+                Props are immutable <br />
+                props can not be modified
+              </span>
+              <span>
+                State: <br />
+                State influance output  <br />
+                State can be modified with setState()  <br />
+                State can only be passed as props <br />
+                State is localy scoped<br />
+              
+              </span>
+            </div>
+            
+          </div>
+          
+        </div>
     </div>
   );
 }
