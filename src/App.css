@@ -1,0 +1,19 @@
+body {
+  box-sizing: border-box;
+  margin: 0px;
+  font-family: "Nunito", sans-serif;
+  background-color: #f2f4fb;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+}
+
+.products {
+  flex: 5;
+}
