@@ -1,0 +1,17 @@
+.small_card {
+  box-sizing: content-box;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #00000028;
+  margin-bottom: 10px;
+}
+
+.small_card .diningIcon {
+  color: #fc6c4c;
+}
