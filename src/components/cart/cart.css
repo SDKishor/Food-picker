@@ -1,4 +1,7 @@
 .cart {
   flex: 2;
-  background-color: red;
+  height: 100vh;
+  max-width: 350px;
+  min-width: 300px;
+  background-color: #fdd3698e;
 }

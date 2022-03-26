@@ -12,6 +12,7 @@ body {
 
 .main {
   display: flex;
+  margin-top: 20px;
 }
 
 .products {
